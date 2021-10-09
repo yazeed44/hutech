@@ -16,6 +16,9 @@ body{
     font-size: 12pt;
 
 }
+#progress-bar{
+    margin-bottom: 10px;
+}
 
 #mainView{
     min-height: 100%;
@@ -52,13 +55,12 @@ right:0;
     margin-left: 30px;
 }
 .task-div:hover{
-    background-color: rgba(78, 75, 75, 0.2);
+    background-color: rgba(126, 126, 126, 0.2);
     cursor:pointer;
-
 
 }
 .task-div{
-    border: 1px solid #eeeeee;
+    /* border: 1px solid #eeeeee; */
 
 }
 #adoption-task-1 h1:before, #adoption-task-2 h1:before, #adoption-task-3 h1:before, #adoption-task-4 h1:before{
@@ -81,7 +83,7 @@ right:0;
     margin: 0 6px 0 0; 
     background-size: contain
 }
-adoption-task-7{
+#adoption-task-7{
     visibility: hidden;
 }
 
