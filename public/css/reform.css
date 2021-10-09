@@ -57,17 +57,41 @@ right:0;
 .task-div:before{
 
 }
-.task-div h1:before{
+#adoption-task-1 h1:before, #adoption-task-2 h1:before, #adoption-task-3 h1:before, #adoption-task-4 h1:before{
     content: "";
     display: block;
-    background: url(../images/check.svg);
+    background: url(../images/completed.png) no-repeat;
     width: 20px;
     height: 20px;
     float: left;
     margin: 0 6px 0 0; 
-    border: 1px solid black;
-
+    background-size: contain
 }
+#adoption-task-5 h1:before, #adoption-task-6 h1:before {
+    content: "";
+    display: block;
+    background: url(../images/pending.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0 6px 0 0; 
+    background-size: contain
+}
+adoption-task-7{
+    display: hidden;
+}
+
+/* .task-div h1:before{
+    content: "";
+    display: block;
+    background: url(../images/completed.png);
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0 6px 0 0; 
+    background-size: contain
+
+} */
 .task-div p,.task-div h1 ,.task-div ul li{
     text-align:left;
     margin-left: 30px;
