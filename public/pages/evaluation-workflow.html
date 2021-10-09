@@ -1,0 +1,166 @@
+<html dir="rtl" lang="ar">
+	<head>
+        <link rel="stylesheet" href="../css/reform.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<meta charset="utf-8"/>
+    </head>
+	<!--<style>
+		body {
+		  background-color: orange;
+		}
+
+		h1 {
+		  color: maroon;
+		  margin-left: 40px;
+		}
+		
+		
+		tr {
+		  border-bottom-width: 1px;
+		  font-size: 1.0625rem;
+		  font-weight: 300;
+		}
+		
+		th {
+		  border-bottom-width: 1px;
+		  font-size: 1.0625rem;
+		  font-weight: 300;
+		}
+		
+		thead>tr>th,
+		tbody>tr>th,
+		tfoot>tr>th,
+		thead>tr>td,
+		tbody>tr>td,
+		tfoot>tr>td {
+		  padding: 12px 8px;
+		  vertical-align: middle;
+		  border-color: #ddd;
+		}
+		
+		tr {
+		  position: relative;
+		}
+		
+		th {
+		  font-size: 0.95rem;
+		  font-weight: 500;
+		  border-top-width: 0;
+		  border-bottom-width: 1px;
+		}
+		
+		
+
+	</style>-->
+    <body>
+		<div class="container">
+		  <h1>تقييم صاحب طلب الاحتضان</h1>
+		  <h2>رقم الطلب 12983912</h2>
+		  <h3> تقييم المنزل </h3>
+		  <!--<form method="GET" id="my_form"></form>-->
+		  <table id="house_evaluation">
+			  <tr>
+				<th>حالة المنزل</th>
+				<th>تاريخ الفحص</th>
+				<th>ملاحظات</th>
+			  </tr>
+			  <tr>
+				<td>
+				<!--<select name="house_condition" id="house_condition">
+				  <option value="acceptable">Acceptable</option>
+				  <option value="unacceptable">Unacceptable</option>
+				</select>-->
+				<input type="checkbox" id="house_condition[11]" name="house_condition" value="House">
+				<label for="house_condition"></label><br>
+				</td>
+				<td><input type="date" id="inspection_date[12]" name="inspection_date" value="2021-10-09" /></td>
+				<td>
+					<input type="text" id="house_reamrk[13]" name="house_remark" value="البيت تم تجهيزه بالكامل بحماية الافياش وما شابه"/>
+				</td>
+			  </tr>
+			</table>
+		  <h3> تقييم خطابات التزكية </h3>
+		  <table id="statement_evaluation">
+			  <tr>
+				<th>قبول الخطاب</th>
+				<th>الجهة المصدرة</th>
+				<th>الخطاب</th>
+			  </tr>
+			  <tr>
+				<td>
+				<!--<select name="mayor_statment" id="mayor_statment">
+				  <option value="acceptable">Acceptable</option>
+				  <option value="unacceptable">Unacceptable</option>
+				</select>-->
+				<input type="checkbox" id="mayor_statment[21]" name="mayor_statment" value="Mayor">
+				<label for="mayor_statment"></label><br>
+				</td>
+				<td>العمدة</td>
+				<td><a href="../files/mayor_statment">خطاب العمدة</a></td>
+			  </tr>
+			  <tr>
+				<td>
+				<input type="checkbox" id="n1_statment[22]" name="n1_statment" value="Neighbor">
+				<label for="n1_statment"></label><br>
+				</td>
+				<td>معرف 1</td>
+				<td><a href="../files/n1_statment">تزكية المعرف الاول</a></td>
+			  </tr>
+			  <tr>
+				<td>
+				<input type="checkbox" id="n2_statment[23]" name="n2_statment" value="Neighbor">
+				<label for="n2_statment"></label><br>
+				</td>
+				<td>معرف 2</td>
+				<td><a href="../files/n2_statment">تزكية المعرف الثاني</a></td>
+			  </tr>
+			  <tr>
+				<td>
+				<input type="checkbox" id="n3_statment[24]" name="n3_statment" value="Neighbor">
+				<label for="n3_statment"></label><br>
+				</td>
+				<td>معرف 3</td>
+				<td><a href="../files/n3_statment">تزكية المعرف الثالث</a></td>
+			  </tr>
+			</table>
+			<button type="button" id="accept_btn" onclick="post('/api/evaluation', 
+			{accepted: 'true', 
+			house_condition: document.getElementByID('house_condition[11]').value, 
+			inspection_date : document.getElementByID('inspection_date[12]').value});">
+			قبول</button>
+			<button type="button" id="reject_btn" onclick="post('/api/evaluation', {accepted: 'false', house_condition: document.getElementByID('house_condition[11]').value, inspection_date : document.getElementByID('inspection_date[12]').value});">رفض</button>
+		</div>
+    </body>
+	<script>
+		/**
+		 * sends a request to the specified url from a form. this will change the window location.
+		 * @param {string} path the path to send the post request to
+		 * @param {object} params the parameters to add to the url
+		 * @param {string} [method=post] the method to use on the form
+		 */
+
+		function post(path, params, method='post') {
+
+		  // The rest of this code assumes you are not using a library.
+		  // It can be made less verbose if you use one.
+		  const form = document.createElement('form');
+		  form.method = method;
+		  form.action = path;
+
+		  for (const key in params) {
+			if (params.hasOwnProperty(key)) {
+			  const hiddenField = document.createElement('input');
+			  hiddenField.type = 'hidden';
+			  hiddenField.name = key;
+			  hiddenField.value = params[key];
+
+			  form.appendChild(hiddenField);
+			}
+		  }
+
+		  document.body.appendChild(form);
+		  form.submit();
+		}
+	</script>
+	<script src="../js/reform.js"></script>
+</html>
