@@ -23,6 +23,8 @@ body{
 #mainView{
     min-height: 100%;
     background-color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 #pageView{
     width: 100%;

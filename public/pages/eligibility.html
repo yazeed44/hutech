@@ -8,32 +8,66 @@
             background-color: #F8f8f8;
             justify-content: center;
             text-align:right;
-            margin:21%;
+            margin:auto;
+            background: transparent;
         }
-        h2 {color:rgb(64, 148, 64)}
-        div{
-            border: 1px solid gray;
-            width: fit-content;
-            padding: 8px;
+        h4 {
+            font-size: 16pt;
+            color:rgb(64, 148, 64)
         }
+        #eligibility_container{
+            /* border: 1px solid rgb(160, 160, 160); */
+            width: 80%;
+            padding: 12px;
+            background:rgb(255, 255, 255);
+            /* box-shadow: -1px 0px 1px 0px rgb(128 126 126);  Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+            /* border-radius: 5px; */
+            margin: auto;
+        }
+        .input-label{
+            width: 100%;
+            padding: 3px;
+            display: flex;
+            justify-content: right;
+            float: right;
+            border-radius: 10px;
+            font-size: 14pt;
+        }
+        #husband_id, #wife_id{
+            width: 250px;
+            margin: 6px;
+            height: 20px;
+            font-size: 14pt;
+        }
+        #eli_btn{
+            background: white;
+            height: 35px;
+            width: 115px;
+            border-radius: 5px;
+            border:1px solid #cccccc;
+            box-shadow: 0px 1px 3px 0 grey;
+            font-size: 13pt;
+
+        }
+
     </style>
 </head>
 <body>
 
-<div class="checks">
-<label for="husband_id">رقم بطاقة احوال الزوج</label><input type="text" id="husband_id"/>
-<label for="wife_id">رقم بطاقة احوال الزوجة</label><input type="text" id="wife_id" />
+    <div id="eligibility_container">
+<div class="input-label"><label for="husband_id">رقم بطاقة احوال الزوج</label><input type="text" id="husband_id"/></div>
+<div class="input-label"><label for="wife_id">رقم بطاقة احوال الزوجة</label><input type="text" id="wife_id" /></div>
 
-<button onclick="function check_eligibility() {
+<button id="eli_btn" onclick="function check_eligibility() {
     document.getElementById('req_nationality').innerText += '&#10004;';
     document.getElementById('req_age').innerText += '&#10004;';
     document.getElementById('req_income').innerText += '&#10004;';
 
 }
 check_eligibility()">تاكد من الجدارة</button>
-<h2 id="req_nationality">كلا الزوجان سعوديان</h2>
-<h2 id="req_age">عمر الزوجة أقل من ٥٠ سنة</h2>
-<h2 id="req_income">الدخل الشهري مقبول</h2>
-
+<h4 id="req_nationality">كلا الزوجان سعوديان</h2>
+<h4 id="req_age">عمر الزوجة أقل من ٥٠ سنة</h2>
+<h4 id="req_income">الدخل الشهري مقبول</h2>
+</div>
 </body>
 </html>
