@@ -11,6 +11,11 @@ body{
  grid-template-columns: 1fr 350px;
 }
 
+#progress-bar h1{
+    font-size: 12pt;
+
+}
+
 #mainView{
     min-height: 100%;
     background-color: black;
@@ -32,8 +37,10 @@ z-index: 500;
  background-color: rgba(255, 255, 255, 0.9);
  margin: 0;
  display:grid;
- grid-template-rows: repeat(15,1fr);
+ grid-template-rows: repeat(9,1fr);
  font-size: 7pt;
+ overflow-y: auto;
+ max-height: 100%;
 }
 #legend h1{
     align-items: center;
@@ -84,8 +91,9 @@ z-index: 500;
 
 .indicator-container{
     width:80%;
-    height: 10px;
+    height: 14px;
     margin: auto;
+    margin-bottom: 2px;
     align-content: center;
     display: flex
 }
