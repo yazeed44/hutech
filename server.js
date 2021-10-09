@@ -18,13 +18,3 @@ app.listen(2021, function () {
   logger.info("Server running at port:   " + 2021);
   logger.info("LOGGER_LEVEL:  ", logger.level.levelStr);
 });
- 
-// app.post("/watson_creds", (req,res) =>{
-//   res.json(watson_creds);
-// });
- 
-app.post("/tuqa", (req,res) =>{
-    logger.info(req.body);
-  res.
-  res.send(req.body + "ooooo");
-});
