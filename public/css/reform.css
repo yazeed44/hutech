@@ -63,7 +63,7 @@ right:0;
     /* border: 1px solid #eeeeee; */
 
 }
-#adoption-task-1 h1:before, #adoption-task-2 h1:before, #adoption-task-3 h1:before, #adoption-task-4 h1:before{
+#adoption-task-1 h1:before, #adoption-task-2 h1:before, #adoption-task-3 h1:before{
     content: "";
     display: block;
     background: url(../images/completed.png) no-repeat;
@@ -73,7 +73,7 @@ right:0;
     margin: 0 6px 0 0; 
     background-size: contain
 }
-#adoption-task-5 h1:before, #adoption-task-6 h1:before {
+#adoption-task-4 h1:before, #adoption-task-5 h1:before, #adoption-task-6 h1:before {
     content: "";
     display: block;
     background: url(../images/pending.png) no-repeat;
