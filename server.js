@@ -5,8 +5,6 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-console.log("Test");
-
 const logger = log4js.getLogger(); //initiate logger object.
 dotenv.config(); //load .env variables to the server as process.env.{variable_name}
  
