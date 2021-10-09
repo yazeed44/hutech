@@ -1,21 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html  dir="rtl" lang="ar">
 <head>
     <meta charset="UTF-8">
     <title>معلومات صاحب الطلب</title>
+    <style>
+        body{
+            text-align: right;
+        }
+        .label{
+            font-size: 16pt;
+            padding: 5px;
+        }
+        .input{
+            width: 200px;
+            padding: 5px;
+        }
+        
+    </style>
 </head>
 
 <body>
 
-<label for="phone">رقم الجوال</label><input type="tel" id="phone"/>
+<div><label class="label" for="phone">رقم الجوال</label><input type="tel" class="input" id="phone"/></div>
+<div><label class="label" for="email">البريد الالكتروني</label><input type="email" class="input" id="email" name="email"/>
+</div>
+<div><label class="label" for="address">العنوان</label><input type="text" class="input" id="address"/>
+</div>
+<div><label class="label" for="city">المدينة</label><input type="text" class="input" id="city"/>
+</div>
+<div><label class="label" for="district">الحي</label><input type="text" class="input" id="district"/>
+</div>
+
+
 <br/>
-<label for="email">البريد الالكتروني</label><input type="email" id="email" name="email"/>
 <br/>
-<label for="address">العنوان</label><input type="text" id="address"/>
 <br/>
-<label for="city">المدينة</label><input type="text" id="city"/>
-<br/>
-<label for="district">الحي</label><input type="text" id="district"/>
 
 <script>
     fetch("https://ehtedhan.duckdns.org/api/user_info?saudi_id=231").then(res => res.json()).then(user_info => {
