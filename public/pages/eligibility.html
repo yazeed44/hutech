@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html dir="rtl" lang="ar">
 <head>
     <meta charset="UTF-8">
     <title>الجدارة</title>
@@ -25,11 +25,19 @@
 <body>
 
 <div class="checks">
-<h2>كلا الزوجان سعوديان &#10004;</h2>
+<label for="husband_id">رقم بطاقة احوال الزوج</label><input type="text" id="husband_id"/>
+<label for="wife_id">رقم بطاقة احوال الزوجة</label><input type="text" id="wife_id" />
 
-<h2>عمر الزوجة أقل من ٥٠ سنة &#10004;</h2>
+<button onclick="function check_eligibility() {
+    document.getElementById('req_nationality').innerText += '&#10004;';
+    document.getElementById('req_age').innerText += '&#10004;';
+    document.getElementById('req_income').innerText += '&#10004;';
 
-<h2>الدخل الشهري مقبول &#10004;</h2>
-</div>
+}
+check_eligibility()">تاكد من الجدارة</button>
+<h2 id="req_nationality">كلا الزوجان سعوديان</h2>
+<h2 id="req_age">عمر الزوجة أقل من ٥٠ سنة</h2>
+<h2 id="req_income">الدخل الشهري مقبول</h2>
+
 </body>
 </html>
