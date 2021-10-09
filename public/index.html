@@ -2,82 +2,59 @@
 <head>
     <link rel="stylesheet" href="./css/reform.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
 </head>
 
 <body>
-    <div id="container">
-        <div id="legend">
+<div id="container">
+    <div id="legend">
 
-            <div id="logo_container">
-                <img id="logo" src="./images/nic.png">
-            </div>
+        <div id="logo_container">
+            <img id="logo" src="./images/nic.png">
+        </div>
 
-            <div id=progress-bar>
-                <h1>Get started</h1>
-                <div class="indicator-container">
-                    <div class="indicator_border">
-                        <div class="indicator"></div>
-                    </div>
-                    <div class="indicator-percent">70%</div>
+        <div id=progress-bar>
+            <h1>عملية الحضانة</h1>
+            <div class="indicator-container">
+                <div class="indicator_border">
+                    <div class="indicator"></div>
                 </div>
+                <div class="indicator-percent">70%</div>
             </div>
-            <div id="adoption-task-1" class="task-div" onclick="redirectMainView('second_screen_user_info.html')">
-                <h1>Eligibility</h1>
-                <ul>
-                    <li>Nationality is Saudi</li>
-                    <!-- Adding 'Wife' in below statement -->
-                    <li>Wife age is below 50</li>
-                    <li>Income is more than 8000 SAR</li>
-                </ul>
-            </div>
-            <div id="adoption-task-2" class="task-div" onclick="redirectMainView('second_screen_user_info.html')">
-                <h1>Verify Contact information</h1>
-                <ul>
-                    <li>Telephone Number</li>
-                    <li>E-mail</li>
-                    <li>Address</li>
-                    <li>City</li>
+        </div>
+        <div id="adoption-task-1" class="task-div" onclick="redirectMainView('second_screen_user_info.html')">
+            <h1>الجدارة</h1>
+        </div>
+        <div id="adoption-task-2" class="task-div" onclick="redirectMainView('second_screen_user_info.html')">
+            <h1>تاكد من معلومات التواصل</h1>
+        </div>
 
-                </ul>
-            </div>
+        <div id="adoption-task-3" class="task-div" onclick="redirectMainView('pref-form.html')">
+            <h1>نموذج طلب احتضان</h1>
+        </div>
 
-            <div id="adoption-task-3" class="task-div" onclick="redirectMainView('pref-form.html')">
-                <h1>Adoption Request Form</h1>
-                <ul>
-                    <li>Form</li>
-                </ul>
-            </div>
-
-            <div id="adoption-task-4" class="task-div" onclick="redirectMainView('fourth_screen_medical_upload.html')">
-                <h1>Medical Tests</h1>
-                <ul>
-                    <li>Drug Test &#10004;</li> 
-                    <li>Contagious Diseases Test</li>
-                </ul>
-                <p>Result Status: Passed</p>
-                </div>
-                <div id="adoption-task-5" class="task-div" onclick="redirectMainView('document_upload.html')">
-                    <h1>Recommendation Letters & Mayor Recommendation</h1>
-                    <p>Result Status: </p>
-
-            </div>
-            <div id="adoption-task-6" class="task-div" onclick="redirectMainView('pick_date_for_meeting.html')">
-                <h1>Meet With Orphan Agency</h1>
-                <p>Appointment Status: </p>
-            </div>
-            <div id="adoption-task-7" class="task-div">
-                <h1>congratulations! You request has been completed</h1>
-                <p>Now you are in the waitlist and your number is 15678</p>
-            </div>
-
-
+        <div id="adoption-task-4" class="task-div" onclick="redirectMainView('fourth_screen_medical_upload.html')">
+            <h1>تحاليل طبية</h1>
+        </div>
+        <div id="adoption-task-5" class="task-div" onclick="redirectMainView('document_upload.html')">
+            <h1>خطابات التزكية</h1>
 
         </div>
-        <div id="mainView">
-            <iframe id="pageView" src="./pages/login-page.html" frameborder="0"></iframe>
+        <div id="adoption-task-6" class="task-div" onclick="redirectMainView('pick_date_for_meeting.html')">
+            <h1>تقابل مع جمعية الايتام</h1>
+            <p>حالة المقابلة: تم جدولتها</p>
         </div>
+        <div id="adoption-task-7" class="task-div">
+            <h1>مبروك! انت الآن في قائمة الانتظار</h1>
+        </div>
+
+
     </div>
-    <script src="./js/reform.js"></script>
+    <div id="mainView">
+        <iframe id="pageView" src="./pages/login-page.html" frameborder="0"></iframe>
+    </div>
+</div>
+<script src="./js/reform.js"></script>
 </body>
 
 </html>
