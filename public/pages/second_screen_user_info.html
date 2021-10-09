@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>معلومات صاحب الطلب</title>
+</head>
+
+<body>
+
+<label for="phone">رقم الجوال</label><input type="tel" id="phone"/>
+<br/>
+<label for="email">البريد الالكتروني</label><input type="email" id="email" name="email"/>
+<br/>
+<label for="address">العنوان</label><input type="text" id="address"/>
+<br/>
+<label for="city">المدينة</label><input type="text" id="city"/>
+<br/>
+<label for="district">الحي</label><input type="text" id="district"/>
+
+<script>
+    fetch("https://ehtedhan.duckdns.org/api/user_info?saudi_id=231").then(res => res.json()).then(user_info => {
+        document.getElementById("phone").value = user_info["telephone_number"];
+        document.getElementById("email").value = user_info["email"];
+        document.getElementById("address").value = user_info["address"];
+        document.getElementById("city").value = user_info["city"];
+        document.getElementById("district").value = user_info["district"];
+    });
+</script>
+</body>
+</html>
