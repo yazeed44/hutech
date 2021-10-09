@@ -1,5 +1,7 @@
 body{
     margin:0;
+    font-family: 'Calibri','Candara','Segoe','Segoe UI','Optima','Arial','sans-serif'; 
+
 }
 #container{
  min-width: 100%;
@@ -30,7 +32,7 @@ z-index: 500;
  background-color: rgba(255, 255, 255, 0.9);
  margin: 0;
  display:grid;
- grid-template-rows: repeat(10,1fr);
+ grid-template-rows: repeat(15,1fr);
  font-size: 7pt;
 }
 #legend h1{
@@ -39,7 +41,7 @@ z-index: 500;
     margin-left: 30px;
 }
 .task-div:hover{
-    background-color: rgba(78, 75, 75, 0.5);
+    background-color: rgba(78, 75, 75, 0.2);
     cursor:pointer;
 
 
