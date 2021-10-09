@@ -25,6 +25,8 @@ body{
     background-color: white;
     padding-top: 40px;
     padding-bottom: 40px;
+    max-height: 100%;
+    box-sizing: border-box;
 }
 #pageView{
     width: 100%;
