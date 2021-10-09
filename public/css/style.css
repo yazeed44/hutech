@@ -93,7 +93,7 @@ aside {
       left: 0;
       padding: 10px 40px;
       width: 100%;
-      background-color: #3c4245;
+      background-color: white;
       -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
       box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3); }
       aside .side-inner .user-profile a.d-flex .user-pic {
@@ -103,7 +103,7 @@ aside {
         aside .side-inner .user-profile a.d-flex .user-pic img {
           border-radius: 50%; }
       aside .side-inner .user-profile a.d-flex .user-name {
-        color: #fff; }
+        color: black; }
     aside .side-inner .action-progress-wrap .action-progress-block {
       padding-left: 30px;
       padding-right: 30px; }
