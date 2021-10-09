@@ -1,0 +1,63 @@
+<html dir="rtl" lang="ar">
+	<head>
+        <link rel="stylesheet" href="./css/reform.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+	<style>
+	
+	</style>
+    <body>
+		<div class="container">
+		  <h1>إرفاق المستندات</h1>
+		  <h3> الرجاء إرفاق المستندات التالية </h3>
+		  <!--<form method="GET" id="my_form"></form>-->
+		  <h3> خطابات تزكية </h3>
+		  <table id="statement_evaluation">
+			  <tr>
+				<th>حالة قبول المستند</th>
+				<th>الجهة الكاتبة</th>
+				<th>الملف</th>
+			  </tr>
+			  <tr>
+				<td>
+				<!--<select name="mayor_statment" id="mayor_statment">
+				  <option value="acceptable">Acceptable</option>
+				  <option value="unacceptable">Unacceptable</option>
+				</select>-->
+				<input type="checkbox" id="mayor_statment[21]" name="mayor_statment" value="Mayor" disabled="disabled" checked>
+				<label for="mayor_statment"> مقبول؟ </label><br>
+				</td>
+				<td>العمدة</td>
+				<td><input type="file" id="mayor_file">تزكية العمدة</a></td>
+			  </tr>
+			  <tr>
+				<td>
+				<input type="checkbox" id="n1_statment[22]" name="n1_statment" value="Neighbor">
+				<label for="n1_statment"> مقبول؟</label><br>
+				</td>
+				<td>معرف 1</td>
+				<td><input type="file" id="n1_file">تزكية المعرف الاول</a></td>
+			  </tr>
+			  <tr>
+				<td>
+				<input type="checkbox" id="n2_statment[23]" name="n2_statment" value="Neighbor">
+				<label for="n2_statment"> مقبول؟</label><br>
+				</td>
+				<td>معرف 2</td>
+				<td><input type="file" id="n2_file">تزكية المعرف الثاني</a></td>
+			  </tr>
+			  <tr>
+				<td>
+				<input type="checkbox" id="n3_statment[24]" name="n3_statment" value="Neighbor">
+				<label for="n3_statment"> مقبول؟</label><br>
+				</td>
+				<td>معرف 3</td>
+				<td><input type="file" id="n3_file">تزكية المعرف الثالث</a></td>
+			  </tr>
+			</table>
+			<button type="button" id="submit_btn" onclick="do_stuff">
+			Submit</button>
+		</div>
+    </body>
+	<script src="./js/reform.js"></script>
+</html>
