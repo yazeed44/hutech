@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Babysitter Application Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <style>
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+              background-color: #dddddd;
+            }
+            </style>
+</head>
+
+<body>
+    <div class="Title">
+        <form action="/">
+            <div class="banner">
+                <h1>نموذج طلب احتضان</h1>
+            </div>
+            <div class="item">
+                <p>الاسم</p>
+                <div class="name-item">
+                    <input type="text" name="الاول" placeholder="First" />
+                    <input type="text" name="الاخير" placeholder="Last" />
+                </div>
+            </div>
+            <div class="item">
+                <p>تاريخ الميلاد</p>
+                <input type="date" name="bdate" required />
+                <i class="fas fa-calendar-alt"></i>
+            </div>
+            <div class="question">
+                <p>الجنس</p>
+                <div class="question-answer">
+                    <input type="radio" value="none" id="radio_1" name="gender" />
+                    <label for="radio_1" class="radio"><span>أنثى</span></label>
+                    <input type="radio" value="none" id="radio_2" name="gender" />
+                    <label for="radio_2" class="radio"><span>ذكر</span></label>
+                </div>
+                <div>
+                    <p>رقم السجل المدني</p>
+                    <input type="text" name="nationalID" />
+                </div>
+                <p>تاريخها ومصدرها</p>
+                <input type="text" name="nationalDate" />
+            </div>
+            <p>رقم الايبان</p>
+            <input type="text" name="iban" />
+    </div>
+    </div>
+    <div class="question1">
+        <p>الحالة الاجتماعية</p>
+        <div class="question-answer">
+            <input type="radio" value="none" id="radio_3" name="status" />
+            <label for="radio_3" class="radio"><span>متزوح</span></label>
+            <input type="radio" value="none" id="radio_4" name="status" />
+            <label for="radio_4" class="radio"><span>مطلق</span></label>
+            <input type="radio" value="none" id="radio_5" name="status" />
+            <label for="radio_5" class="radio"><span>ارمل</span></label>
+            <input type="radio" value="none" id="radio_6" name="status" />
+            <label for="radio_6" class="radio"><span>اعزب</span></label>
+        </div>
+    </div>
+    <div class="question2">
+        <p>الحالة الصحية</p>
+        <div class="question-answer">
+            <input type="radio" value="none" id="health_1" name="health" />
+            <label for="health_1" class="radio"><span>ممتازة</span></label>
+            <input type="radio" value="none" id="health_2" name="health" />
+            <label for="health_2" class="radio"><span>جيدة</span></label>
+            <input type="radio" value="none" id="health_3" name="health" />
+            <label for="health_3" class="radio"><span>ضعيفة</span></label>
+        </div>
+    </div>
+    <div class="question3">
+        <p>الحالة الاقتصادية</p>
+        <div class="question-answer">
+            <input type="radio" value="none" id="radio_5" name="money" />
+            <label for="radio_5" class="radio"><span>جيدة</span></label>
+            <input type="radio" value="none" id="radio_6" name="money" />
+            <label for="radio_6" class="radio"><span>متوسطه</span></label>
+            <input type="radio" value="none" id="radio_7" name="money" />
+            <label for="radio_7" class="radio"><span>ممتازة</span></label>
+            <input type="radio" value="none" id="radio_8" name="money" />
+            <label for="radio_8" class="radio"><span>ضعيفة</span></label>
+        </div>
+    </div>
+    <div class="question">
+        <p>المستوى التعليمي</p>
+        <div class="question-answer">
+            <input type="radio" value="none" id="radio_7" name="educ" />
+            <label for="radio_7" class="radio"><span>أمي</span></label>
+            <input type="radio" value="none" id="radio_8" name="educ" />
+            <label for="radio_8" class="radio"><span>يقرأ ويكتب</span></label>
+            <input type="radio" value="none" id="radio_9" name="educ" />
+            <label for="radio_9" class="radio"><span>ابتدائي</span></label>
+            <input type="radio" value="none" id="radio_10" name="educ" />
+            <label for="radio_10" class="radio"><span>متوسط</span></label>
+            <input type="radio" value="none" id="radio_11" name="educ" />
+            <label for="radio_11" class="radio"><span>ثانوي</span></label>
+            <input type="radio" value="none" id="radio_12" name="educ" />
+            <label for="radio_12" class="radio"><span>جامعي</span></label>
+            <input type="radio" value="none" id="radio_13" name="educ" />
+            <label for="radio_13" class="radio"><span>فوق جامعي</span></label>
+        </div>
+    </div>
+    <div class="otherquestion">
+        <div>
+            <p>المهنة</p>
+            <input type="text" name="job" />
+        </div>
+        <p>مكان العمل</p>
+        <input type="text" name="jobplace" />
+    </div>
+    <p>الدخل الشهري</p>
+    <input type="text" name="salary" />
+    </div>
+    </div>
+    <div class="living">
+        <p>هل يوجد مصدر دخل اخر؟</p>
+        <div class="question-answer">
+            <input type="radio" value="none" id="radio_6" name="money" />
+            <label for="radio_6" class="radio"><span>نعم</span></label>
+            <input type="radio" value="none" id="radio_7" name="money" />
+            <label for="radio_7" class="radio"><span>لا</span></label>
+        </div>
+    </div>
+    <div class="living2">
+        <p>نوع السكن</p>
+        <div class="question-answer">
+            <input type="radio" value="none" id="radio_6" name="house" />
+            <label for="radio_6" class="radio"><span>ملك</span></label>
+            <input type="radio" value="none" id="radio_7" name="house" />
+            <label for="radio_7" class="radio"><span>ايجار</span></label>
+        </div>
+    </div>
+    <div class="item">
+        <p>العنوان</p>
+        <textarea rows="3"></textarea>
+    </div>
+    <div class="condition">
+        <p>الصفات الشخصية</p>
+        <div class="question-answer">
+            <table>
+                <tr>
+                  <th>حالة العقم</th>
+                  <th>لون الشعر</th>
+                  <th>لون العينين</th>
+                </tr>
+                <tr>
+                  <td> </td>
+                  <td> </td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td> </td>
+                  <td> </td>
+                  <td> </td>
+                </tr>
+              </table>              
+        </div>
+        <div>
+            <p>عدد الافراد الذي يسكنون مع طالب الاحتضان</p>
+            <table>
+                <tr>
+                    <th>الاسم</th>
+                    <th>الجنس</th>
+                    <th>تاريخ الميلاد</th>
+                    <th>المهنة</th>
+                    <th>السجل المدني</th>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+            </table>
+        </div>
+        <div class="living2">
+            <p>الجنس الذي ترغب في احتضانه</p>
+            <div class="question-answer">
+                <input type="radio" value="none" id="radio_6" name="house" />
+                <label for="radio_6" class="radio"><span>ذكر</span></label>
+                <input type="radio" value="none" id="radio_7" name="house" />
+                <label for="radio_7" class="radio"><span>أنثى</span></label>
+                <input type="radio" value="none" id="radio_7" name="house" />
+                <label for="radio_7" class="radio"><span>غير محدد</span></label>
+            </div>
+        </div>
+        <div>
+            <div>
+                <p>اسم الطفل المقترح</p>
+                <input type="text" name="salary" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
