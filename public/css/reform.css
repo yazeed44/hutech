@@ -18,7 +18,7 @@ body{
 
 #mainView{
     min-height: 100%;
-    background-color: black;
+    background-color: white;
 }
 #pageView{
     width: 100%;
@@ -42,6 +42,8 @@ right:0;
  font-size: 7pt;
  overflow-y: scroll;
  max-height: 100%;
+ box-shadow: -3px 0px 15px 0px rgb(128 126 126);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+
 }
 #legend h1{
     align-items: center;
@@ -54,7 +56,8 @@ right:0;
 
 
 }
-.task-div:before{
+.task-div{
+    border: 1px solid #eeeeee;
 
 }
 #adoption-task-1 h1:before, #adoption-task-2 h1:before, #adoption-task-3 h1:before, #adoption-task-4 h1:before{
@@ -78,7 +81,7 @@ right:0;
     background-size: contain
 }
 adoption-task-7{
-    display: hidden;
+    visibility: hidden;
 }
 
 /* .task-div h1:before{
