@@ -2,31 +2,27 @@
 	<head>
         <link rel="stylesheet" href="../css/reform.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<meta charset="utf-8"/>
+		<meta charset="utf-8" />
     </head>
-	<!--<style>
+	<style>
 		body {
-		  background-color: orange;
+		  background-color: #F5F5F5;
 		}
-
 		h1 {
-		  color: maroon;
+		  color: #409440;
 		  margin-left: 40px;
 		}
-		
-		
+
 		tr {
 		  border-bottom-width: 1px;
 		  font-size: 1.0625rem;
 		  font-weight: 300;
 		}
-		
 		th {
 		  border-bottom-width: 1px;
 		  font-size: 1.0625rem;
 		  font-weight: 300;
 		}
-		
 		thead>tr>th,
 		tbody>tr>th,
 		tfoot>tr>th,
@@ -37,21 +33,32 @@
 		  vertical-align: middle;
 		  border-color: #ddd;
 		}
-		
 		tr {
 		  position: relative;
 		}
-		
 		th {
 		  font-size: 0.95rem;
 		  font-weight: 500;
 		  border-top-width: 0;
 		  border-bottom-width: 1px;
 		}
-		
-		
-
-	</style>-->
+		input[type=text] {
+		  background-color: white;
+		  background-position: 10px 10px;
+		  background-repeat: no-repeat;
+		  padding-left: 40px;
+		}
+		button {
+		  background-color: #409440;
+		  border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		}
+	</style>
     <body>
 		<div class="container">
 		  <h1>تقييم صاحب طلب الاحتضان</h1>
@@ -75,7 +82,8 @@
 				</td>
 				<td><input type="date" id="inspection_date[12]" name="inspection_date" value="2021-10-09" /></td>
 				<td>
-					<input type="text" id="house_reamrk[13]" name="house_remark" value="البيت تم تجهيزه بالكامل بحماية الافياش وما شابه"/>
+					<textarea id="house_reamrk[13]" name="house_remark" rows="3" cols="50"> البيت تم تجهيزه بالكامل بحماية الافياش وما شابه </textarea>
+					<!--<input type="text" id="house_reamrk[13]" name="house_remark" value="البيت تم تجهيزه بالكامل بحماية الافياش وما شابه"/>-->
 				</td>
 			  </tr>
 			</table>
@@ -162,5 +170,5 @@
 		  form.submit();
 		}
 	</script>
-	<script src="../js/reform.js"></script>
+	<script src="./js/reform.js"></script>
 </html>
